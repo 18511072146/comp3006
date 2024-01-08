@@ -1,0 +1,83 @@
+
+PUT http://localhost:3000/api/hotel?id=6594fdad15a4278e8fc2ff60&password=123
+Content-Type: application/json
+
+{
+    "name": "Hilton",
+    "password": "123"
+}
+
+###
+
+GET http://localhost:3000/api/hotels/room
+
+### 查询房间列表
+GET http://localhost:3000/api/room?id=6596544aca931feae6ce7053
+
+
+### 添加一个新的 Hotel
+POST http://localhost:3000/api/hotel
+Content-Type: application/json
+
+{
+    "name": "Hotel",
+    "phone": "123",
+    "location": "NY",
+    "roomcount": 2,
+    "email": "123@email.com",
+    "password": "12345"
+}
+
+### 登录
+POST http://localhost:3000/api/hotel/login
+Content-Type: application/json
+
+{
+    "email": "123@email.com",
+    "password": "12345"
+}
+
+### 添加一个新的 Room
+POST http://localhost:3000/api/room?id=6596544aca931feae6ce7053
+Content-Type: application/json
+
+{
+    "roomId": 101,
+    "roomType": "Standard Room",
+    "price": 1,
+    "available": true,
+    "email": "123@email.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:3000/api/test
+
+### 订一个 Room
+POST http://localhost:3000/api/book
+Content-Type: application/json
+
+{
+    "name": "123",
+    "roomId": 123,
+    "checkInDate": "123",
+    "checkOutDate": "123"
+}
+
+### delete room
+POST http://localhost:3000/api/room
+Content-Type: application/json
+
+{
+    "roomid": 123
+}
+
+### change room info
+PUT http://localhost:3000/api/room?id=65952a598b4b35da1df2aff7
+Content-Type: application/json
+
+{
+    "roomId": 303,
+    "roomType": "double"
+}
+ 

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  backend:
+    build: .
+    environment:
+      - BACKEND_PORT=3000
+      - BACKEND_MONGO_URL=mongodb://mongodb:27017/hotel
+    ports:
+      - 3000:3000
+  mongodb:
+    image: mongo
